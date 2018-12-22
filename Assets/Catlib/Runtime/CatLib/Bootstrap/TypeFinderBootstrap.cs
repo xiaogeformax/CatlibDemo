@@ -17,13 +17,13 @@ namespace CatLib
         {
             foreach (var assembly in AppDomain.CurrentDomain.GetAssemblies())
             {
-                int sort;
+                int sort  =0;
 
                 //todo Assembly
-               /* if (!Assemblys.Assembly.TryGetValue(assembly.GetName().Name, out sort))
-                {
-                    continue;
-                }*/
+                /* if (!Assemblys.Assembly.TryGetValue(assembly.GetName().Name, out sort))
+                 {
+                     continue;
+                 }*/
                 var assemblyData = assembly;
                 App.OnFindType((finder) => assemblyData.GetType(finder), sort);
             }
